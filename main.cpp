@@ -6,6 +6,9 @@
 #include <unordered_map>
 #include <regex>
 
+#define serverIP "1.2.3.4" // Source IP for solving server (Placeholder)
+#define serverPort 12345   // Port number for solving server (Placeholder)
+ 
 void takeCommands();
 size_t WriteCallback(void*, size_t, size_t, std::string*);
 std::string getSolFromServer(std::string, int, std::string);
@@ -60,7 +63,7 @@ void takeCommands() {
             }
             else {
                 // Default server address: http://localhost:51420/
-                std::string solution = getSolFromServer("192.168.0.191", 51420, cube.getStateID());
+                std::string solution = getSolFromServer(serverIP, serverPort, cube.getStateID());
                 std::cout << solution << std::endl;
                 std::cout << "Apply moves? (y/n): ";
                 char apply;
