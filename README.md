@@ -17,7 +17,7 @@ I initially tried to implement my own solving algorithm in C++, but after writin
 
 2. **TwophaseSolver Server**  
    Set up a simple **TwophaseSolver** server using a short Python script. Define an IP address and port on your local network or machine.  
-   Update the IP and port settings in `main.cpp` accordingly.
+   Update the IP and port settings in `main.cpp` accordingly. For more information please see the [source repo](https://github.com/hkociemba/RubiksCube-TwophaseSolver).
 
 ---
 
