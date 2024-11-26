@@ -17,7 +17,7 @@ I initially tried to implement my own solving algorithm in C++, but after writin
 
 2. **TwophaseSolver Server**  
    Set up a simple **TwophaseSolver** server using a short Python script. Define an IP address and port on your local network or machine.  
-   Update the IP and port settings in `main.cpp` accordingly. For more information please see the [source repo](https://github.com/hkociemba/RubiksCube-TwophaseSolver).
+   Update the IP and port settings in `main.cpp` accordingly. For more information, please see the [source repo](https://github.com/hkociemba/RubiksCube-TwophaseSolver).
 
 ---
 
@@ -33,8 +33,24 @@ I initially tried to implement my own solving algorithm in C++, but after writin
 
 This project is designed to work with a physical assembly consisting of:
 
-- **5 Servos**: Each servo is responsible for rotating a Rubik's Cube face (except for the top face). The servos should have 360-degree rotation capabilities.
-- **Raspberry Pi Camera Module 2**: Positioned above the Rubik's Cube's top face. The camera is used to capture and analyze the colors of each side of the cube through a series of rotations.
+- **5 Servos**: Each servo is responsible for rotating a Rubik's Cube face (except for the top face). I used 360 degree servos, but you can make 180 degrees work.
+- **Raspberry Pi Camera Module 2**: Positioned above the Rubik's Cube's top face. The camera is used to capture the colors of each side of the cube through a series of rotations.
+
+---
+
+## Software Design
+
+My C++ code differs from Mr. Kociemba's cube representations because I started this project independently and wanted to build everything from scratch. So, I apologize if the structure of the code seems unconventional.
+
+The cube is composed of 27 "pieces", defined in `piece.hpp`. These pieces have a 3D position array and a 3D color array, in (x,y,z) format for both. The center piece is at (0,0,0), and has no visible colors, so its color array is ('A','A','A'), where 'A' represents a null color (used for ASCII math).
+
+Then, the cube holds all these pieces in a 3x9 array, where the first dimension (3) is the layer, starting from the front layer, meaning the entire front face, and working back. See `cube.hpp` for more information.
+
+The cube is printed to the console as shown below:
+
+![image](https://github.com/user-attachments/assets/b0c55e5d-5f36-4c9d-868d-fbae72b52298)
+
+You can then execute very simple commands, see `takeCommands()` in `main.cpp` for the commands.
 
 ---
 
