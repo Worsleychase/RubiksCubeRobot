@@ -11,11 +11,15 @@ I initially tried to implement my own solving algorithm in C++, but after writin
 
 ### Dependencies
 
-1. **cURL Library**  
+1. **OpenCV**
+   To install OpenCV, use **vcpkg**. For installation instructions, visit the [OpenCV packpage page](https://vcpkg.link/ports/opencv).
+   Alternatively, use CMake and just install OpenCV according to their instructions.
+
+3. **cURL Library**  
    To install the cURL library, use **vcpkg**. For installation instructions, visit the [cURL package page](https://vcpkg.io/en/package/curl.html).  
    After installation, make sure to move the `libcurl.dll` file into the same directory where your `main.cpp` is running. If it's not in the correct location, you might encounter issues.
 
-2. **TwophaseSolver Server**  
+4. **TwophaseSolver Server**  
    Set up a simple **TwophaseSolver** server using a short Python script. Define an IP address and port on your local network or machine.  
    Update the IP and port settings in `main.cpp` accordingly. For more information, please see the [source repo](https://github.com/hkociemba/RubiksCube-TwophaseSolver).
 
