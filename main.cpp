@@ -1,14 +1,15 @@
 // main.cpp
 
-#include "cube.hpp"
-
 #include <curl/curl.h>
 #include <unordered_map>
 #include <regex>
 
-#define serverIP "1.2.3.4" // Source IP for solving server (Placeholder)
-#define serverPort 12345   // Port number for solving server (Placeholder)
- 
+#include "cube.hpp"
+#include "imageProcess.cpp"
+
+#define serverIP "192.168.0.191" // Source IP for solving server (Placeholder)
+#define serverPort 51420   // Port number for solving server (Placeholder)
+
 void takeCommands();
 size_t WriteCallback(void*, size_t, size_t, std::string*);
 std::string getSolFromServer(std::string, int, std::string);
@@ -27,6 +28,8 @@ void takeCommands() {
 
     cube.printCube();
     std::cout << std::endl;
+
+    std::cout << returnFaceColors();
 
     std::cout << "Enter commands (f,F,r,R,b,B,l,L,d,D,u,U), 'solve', 'random', or 'q' to quit:" << std::endl;
 

@@ -17,10 +17,10 @@ public:
 
     // Front = pieces[0]                                            col[2]
     // Right = pieces[0]2,5,8 + pieces[1]2,5,8 + pieces[2]2,5,8     col[0]
-    // Back = pieces[2]                                             col[2]
-    // Left = pieces[0]0,3,6 + pieces[1]0,3,6 + pieces[2]0,3,6      col[0]
-    // Up = pieces[0]0,1,2 + pieces[1]0,1,2 + pieces[2]0,1,2        col[1]
-    // Down = pieces[0]6,7,8   pieces[1]6,7,8 + pieces[2]6,7,8      col[1]
+    // Back  = pieces[2]                                            col[2]
+    // Left  = pieces[0]0,3,6 + pieces[1]0,3,6 + pieces[2]0,3,6     col[0]
+    // Up    = pieces[0]0,1,2 + pieces[1]0,1,2 + pieces[2]0,1,2     col[1]
+    // Down  = pieces[0]6,7,8   pieces[1]6,7,8 + pieces[2]6,7,8     col[1]
 
     int rotationCount;
 
