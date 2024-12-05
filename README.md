@@ -56,4 +56,4 @@ You can then execute very simple commands, see `takeCommands()` in `main.cpp` fo
 
 ## Disclaimer
 
-I do not take ANY credit for the cURL library or Herbert Kociemba's two-phase solver. All credit for these components goes to their respective creators. The hardware and software integration in this project is the result of my own work.
+I do not take ANY credit for the OpenCV library, cURL library or Herbert Kociemba's two-phase solver. All credit for these components goes to their respective creators. The hardware and software integration in this project is the result of my own work.
