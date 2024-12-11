@@ -1,0 +1,3 @@
+/home/myPi/Desktop/rubikRobot/build/CMakeFiles/rubikSolver.dir
+/home/myPi/Desktop/rubikRobot/build/CMakeFiles/edit_cache.dir
+/home/myPi/Desktop/rubikRobot/build/CMakeFiles/rebuild_cache.dir
