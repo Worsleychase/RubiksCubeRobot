@@ -35,16 +35,18 @@ public:
     bool robotStatus;
 
     virCube(bool robotState) : robotStatus(robotState) {
-        bottomServo.rotationTimeCW = 175;
-        bottomServo.rotationTimeCCW = 170;
+        bottomServo.rotationTimeCW = 140;
+        bottomServo.CWStop = 1.59;
+        bottomServo.rotationTimeCCW = 150;
         //frontServo.rotationTimeCW = 150;
         frontServo.rotationTimeCCW = 155;
-        leftServo.rotationTimeCW = 175;
+        leftServo.rotationTimeCW = 145;
         leftServo.rotationTimeCCW = 150;
         backServo.rotationTimeCW = 180;
-        backServo.rotationTimeCCW = 160;
-        rightServo.rotationTimeCW = 160;
-        rightServo.rotationTimeCCW = 155;
+        backServo.rotationTimeCCW = 165;
+        backServo.CCWStop = 1.51;
+        rightServo.rotationTimeCW = 170;
+        rightServo.rotationTimeCCW = 165;
         
         rotationCount = 0;
         robotStatus = robotState;
@@ -701,6 +703,11 @@ public:
             if (move.length() == 2) {
                 char moveType = move[0];
                 int count = move[1] - '0';
+                
+                if (move == "U2") {
+                    rotateFace('W');
+                    printCube(); std::cout << "\n";
+                }
                 
                 if (count == 3) {
                     rotateFace(moveType);

@@ -109,6 +109,33 @@ void takeCommands() {
             } else {
                 std::cout << "Not " + command + "ing..." << std::endl;
             }
+        } else if (command == "scan") {
+            if (robotStatus) {
+                cube.pictureSequence();
+            } else {
+                std::cout << "Connect me first >:(" << std::endl;
+            }
+        } else if (command == "warmup") {
+            cube.rotateFaceServoONLY('f');
+            cube.rotateFaceServoONLY('f');
+            cube.rotateFaceServoONLY('F');
+            cube.rotateFaceServoONLY('F');
+            cube.rotateFaceServoONLY('r');
+            cube.rotateFaceServoONLY('r');
+            cube.rotateFaceServoONLY('R');
+            cube.rotateFaceServoONLY('R');
+            cube.rotateFaceServoONLY('b');
+            cube.rotateFaceServoONLY('b');
+            cube.rotateFaceServoONLY('B');
+            cube.rotateFaceServoONLY('B');
+            cube.rotateFaceServoONLY('l');
+            cube.rotateFaceServoONLY('l');
+            cube.rotateFaceServoONLY('L');
+            cube.rotateFaceServoONLY('L');
+            cube.rotateFaceServoONLY('d');
+            cube.rotateFaceServoONLY('d');
+            cube.rotateFaceServoONLY('D');
+            cube.rotateFaceServoONLY('D');
         }
         else {
             std::cout << "Invalid command. Please try again." << std::endl;

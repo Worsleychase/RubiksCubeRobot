@@ -53,7 +53,7 @@ public:
 		
 		delay(500);
 		killServo();
-		delay(50);
+		delay(500);
     }
     
 private:

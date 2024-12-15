@@ -77,7 +77,7 @@ std::string returnFaceColors() {
         {cv::Scalar(160, 225, 50), cv::Scalar(179, 255, 255)},   // Red 
         {cv::Scalar(65, 200, 50), cv::Scalar(75, 255, 255)},     // Green
         {cv::Scalar(115, 225, 50), cv::Scalar(120, 255, 255)},   // Blue
-        {cv::Scalar(32, 145, 50), cv::Scalar(37, 205, 255)},     // Yellow
+        {cv::Scalar(36, 105, 50), cv::Scalar(64, 205, 255)},     // Yellow
         {cv::Scalar(7, 210, 50), cv::Scalar(35, 255, 255)},      // Orange
         {cv::Scalar(105, 30, 50), cv::Scalar(110, 95, 255)}      // White
     };
@@ -85,9 +85,9 @@ std::string returnFaceColors() {
     std::vector<std::pair<cv::Scalar, cv::Scalar>> colorRangesTL = {
         {cv::Scalar(160, 120, 50), cv::Scalar(179, 255, 255)},    // Red 
         {cv::Scalar(70, 120, 50), cv::Scalar(95, 255, 255)},      // Green
-        {cv::Scalar(115, 190, 50), cv::Scalar(120, 255, 255)},   // Blue
+        {cv::Scalar(115, 160, 50), cv::Scalar(120, 255, 255)},   // Blue
         {cv::Scalar(10, 70, 50), cv::Scalar(50, 255, 255)},     // Yellow
-        {cv::Scalar(40, 100, 50), cv::Scalar(70, 255, 255)},       // Orange
+        {cv::Scalar(40, 130, 50), cv::Scalar(70, 255, 255)},       // Orange
         {cv::Scalar(105, 20, 50), cv::Scalar(110, 120, 255)}     // White
     };
     
@@ -112,7 +112,7 @@ std::string returnFaceColors() {
             int colorIndex = -1;
             int maxColorCount = 0;
 
-            if (row == 0 && col == 0) {
+            /*if (row == 0 && col == 0) {
                 for (size_t i = 0; i < colorRangesTL.size(); ++i) {
                     cv::Mat mask;
                     cv::inRange(cellImage, colorRangesTL[i].first, colorRangesTL[i].second, mask);
@@ -123,7 +123,7 @@ std::string returnFaceColors() {
                         colorIndex = i;
                     }
                 }
-            } else {
+            } else {*/
                 for (size_t i = 0; i < colorRanges.size(); ++i) {
                     cv::Mat mask;
                     cv::inRange(cellImage, colorRanges[i].first, colorRanges[i].second, mask);
@@ -134,7 +134,7 @@ std::string returnFaceColors() {
                         colorIndex = i;
                     }
                 }
-            }
+            //}
 
             if (colorIndex >= 0) {
                 cellColors[row * cols + col] = colorCodes[colorIndex];
