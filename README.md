@@ -8,6 +8,10 @@ This project started as a university project for my modern electronics class. Ou
 Here it is in action solving a Rubik's cube:
 https://www.youtube.com/shorts/5jGwbwq_Clw
 
+
+https://github.com/user-attachments/assets/af5fac4f-6dd2-4b30-8b20-58a989814b62
+
+
 So, this is a simple Rubik's Cube Solving Robot software that leverages **Herbert Kociemba's RubiksCube-TwophaseSolver** repository, [wiringPi](https://github.com/WiringPi/WiringPi), [OpenCV](https://opencv.org), [cURL](https://curl.se), and [libcamera](https://libcamera.org).
 Huge thanks to Herbert Kociemba for his work! You can find his repository [here](https://github.com/hkociemba/RubiksCube-TwophaseSolver).
 Also big thanks to everyone who contributed to the libraries above.
